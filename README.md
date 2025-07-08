@@ -31,7 +31,7 @@ These tools are automatically executed using [**pre-commit**](https://pre-commit
 1. Install development dependencies:
 
 ```bash
-pip install -r requirements.txt-dev.txt
+pip install -r requirements.txt
 ```
 
 2. Install Git hooks (only once):

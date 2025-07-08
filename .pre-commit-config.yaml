@@ -80,6 +80,6 @@ repos:
     hooks:
       - id: check-commit-msg
         name: Commit message style checker
-        entry: python3 scripts/check_commit_msg.py
+        entry: python scripts/check_commit_message.py
         language: system
         stages: [ commit-msg ]
