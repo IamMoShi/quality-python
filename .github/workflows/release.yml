@@ -1,7 +1,7 @@
 name: Release - Build and Push Docker Image
 
 on:
-  tag:
+  release:
     types: [published]
 
 jobs:
