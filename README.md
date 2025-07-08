@@ -31,7 +31,7 @@ These tools are automatically executed using [**pre-commit**](https://pre-commit
 1. Install development dependencies:
 
 ```bash
-pip install -r requirements-dev.txt
+pip install -r requirements.txt-dev.txt
 ```
 
 2. Install Git hooks (only once):
@@ -45,6 +45,42 @@ pre-commit install --hook-type commit-msg
 ```
 
 ---
+
+## Run
+
+To run precommit and all the hooks, you can try to commit or, if you don't want to create a commit, you can run at the root of the project :
+```bash
+pre-commit run --all
+```
+
+Example of response :
+```bash
+(.venv) PS C:\Users\leofo\Projects\quality-python> pre-commit run --all
+isort (python)...........................................................Passed
+black....................................................................Passed
+flake8...................................................................Passed
+bandit...................................................................Passed
+Format docstrings........................................................Passed
+Detect secrets...........................................................Passed
+check yaml...............................................................Passed
+fix end of files.........................................................Passed
+trim trailing whitespace.................................................Passed
+radon cyclomatic complexity..............................................Passed
+codespell................................................................Passed
+vale.....................................................................Passed
+pylint...................................................................Passed
+```
+
+## Important
+
+### Add custom name (vale blocking)
+
+If vale is blocking a commit due to an unknown name but you want to bypass that, you can add your custom words in [.vale/styles/config/vocabularies/Perso/accept.txt](.vale/styles/config/vocabularies/Perso/accept.txt).
+
+### Add custom name (codespell)
+
+To ignore codespell, add the name to [.codespell.ignore](.codespell.ignore)
+
 
 ## 🛠️ Tool Overview
 
