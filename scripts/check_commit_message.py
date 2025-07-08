@@ -10,6 +10,7 @@ ALLOWED_PREFIXES = [
     "REFACTOR",
     "TEST",
     "CHORE",
+    "UPDATE",
 ]
 
 
